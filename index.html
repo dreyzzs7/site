@@ -2,195 +2,212 @@
 
 <html lang="pt-br">
 
-<head> <meta charset="UTF-8">
+<head>
+  <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>🌌 Fatos do Universo</title>
+  <title>🌌 Fatos do Universo</title>
 
-<style> /* Usamos "seletores" para dizer ao CSS qual parte do HTML queremos estilizar. 'body' seleciona a tag <body> inteira (o corpo do site). / body { / 'font-family' define a família da fonte (o "tipo de letra") do texto. / / 'sans-serif' é uma fonte limpa, sem aquelas "perninhas" (serifas). */ font-family: Arial, sans-serif;
+  <style>
+    /* Usamos "seletores" para dizer ao CSS qual parte do HTML queremos estilizar.
+      'body' seleciona a tag <body> inteira (o corpo do site).
+    */
+    body {
+      /* 'font-family' define a família da fonte (o "tipo de letra") do texto. */
+      /* 'sans-serif' é uma fonte limpa, sem aquelas "perninhas" (serifas). */
+      font-family: Arial, sans-serif;
 
-  /* &#39;background-color&#39; define a cor do fundo de todo o site. */
-  /* Usamos um azul-escuro, quase preto, para o nosso tema espacial. */
-  background-color: #0a0a23;
+      /* 'background-color' define a cor do fundo de todo o site. */
+      /* Usamos um azul-escuro, quase preto, para o nosso tema espacial. */
+      background-color: #0a0a23;
 
-  /* &#39;color&#39; define a cor padrão do TEXTO. */
-  /* Um cinza-claro para contrastar bem com o fundo escuro. */
-  color: #eaeaea;
+      /* 'color' define a cor padrão do TEXTO. */
+      /* Um cinza-claro para contrastar bem com o fundo escuro. */
+      color: #eaeaea;
 
-  /* &#39;display: flex&#39; e as próximas linhas são um truque moderno 
-     para centralizar TUDO perfeitamente no meio da tela (vertical e horizontal). */
-  display: flex;
-  flex-direction: column; /* Organiza os itens em coluna (um em cima do outro). */
-  align-items: center; /* Centraliza horizontalmente. */
-  justify-content: center; /* Centraliza verticalmente. */
+      /* 'display: flex' e as próximas linhas são um truque moderno 
+         para centralizar TUDO perfeitamente no meio da tela (vertical e horizontal). */
+      display: flex;
+      flex-direction: column; /* Organiza os itens em coluna (um em cima do outro). */
+      align-items: center; /* Centraliza horizontalmente. */
+      justify-content: center; /* Centraliza verticalmente. */
 
-  /* &#39;min-height: 100vh&#39; garante que o corpo ocupe pelo menos 100% da altura da tela. */
-  min-height: 100vh;
+      /* 'min-height: 100vh' garante que o corpo ocupe pelo menos 100% da altura da tela. */
+      min-height: 100vh;
 
-  /* &#39;margin: 0&#39; remove qualquer margem padrão que o navegador coloca. */
-  margin: 0;
-}
+      /* 'margin: 0' remove qualquer margem padrão que o navegador coloca. */
+      margin: 0;
+    }
 
-/* &#39;main&#39; seleciona a tag &lt;main&gt; que criamos no HTML.
-  Será a nossa &quot;caixa&quot; principal para o conteúdo.
-*/
-main {
-  /* Uma cor de fundo um pouco mais clara que o body, para criar um &quot;cartão&quot;. */
-  background-color: #1b1b3a;
+    /* 'main' seleciona a tag <main> que criamos no HTML.
+      Será a nossa "caixa" principal para o conteúdo.
+    */
+    main {
+      /* Uma cor de fundo um pouco mais clara que o body, para criar um "cartão". */
+      background-color: #1b1b3a;
 
-  /* &#39;padding&#39; é o &quot;espaçamento interno&quot; da caixa. */
-  padding: 30px;
+      /* 'padding' é o "espaçamento interno" da caixa. */
+      padding: 30px;
 
-  /* &#39;border-radius&#39; deixa as bordas da caixa arredondadas. */
-  border-radius: 15px;
+      /* 'border-radius' deixa as bordas da caixa arredondadas. */
+      border-radius: 15px;
 
-  /* &#39;box-shadow&#39; cria uma sombra. Aqui, usamos para criar um &quot;brilho&quot; (glow). */
-  /* 0 0 20px ... significa que a sombra não tem deslocamento (0, 0), 
-     tem 20px de &quot;borrão&quot; (blur) e a cor é o nosso ciano brilhante. */
-  box-shadow: 0 0 20px #00ffff;
+      /* 'box-shadow' cria uma sombra. Aqui, usamos para criar um "brilho" (glow). */
+      /* 0 0 20px ... significa que a sombra não tem deslocamento (0, 0), 
+         tem 20px de "borrão" (blur) e a cor é o nosso ciano brilhante. */
+      box-shadow: 0 0 20px #00ffff;
 
-  /* &#39;text-align: center&#39; centraliza todo o texto DENTRO da caixa &lt;main&gt;. */
-  text-align: center;
+      /* 'text-align: center' centraliza todo o texto DENTRO da caixa <main>. */
+      text-align: center;
+      
+      /* Define uma largura máxima, para não ficar gigante em telas grandes. */
+      max-width: 600px;
+    }
+
+    /* 'h1' seleciona o nosso título principal. 
+    */
+    h1 {
+      /* 'font-size' muda o tamanho do texto. '2.5rem' é uma unidade moderna 
+         que significa "2.5 vezes o tamanho da fonte padrão do navegador". */
+      font-size: 2.5rem;
+
+      /* 'color' define a cor do título. Usamos nosso ciano brilhante. */
+      color: #00ffff;
+      
+      /* 'text-shadow' adiciona uma sombra ao texto, o que cria um efeito "neon". */
+      text-shadow: 0 0 8px #00ffff;
+    }
+
+    /* '#fato-display' seleciona o elemento que tem o ID "fato-display".
+      IDs (identificadores) são únicos, só um elemento na página pode ter esse nome.
+      Começamos com '#' para selecionar um ID.
+    */
+    #fato-display {
+      font-size: 1.2rem;
+      /* 'min-height' define uma altura MÍNIMA. 
+         Isso evita que o botão "pule" para cima e para baixo 
+         quando o texto do fato muda de tamanho. */
+      min-height: 80px;
+      
+      /* 'line-height' controla o espaçamento entre as linhas do texto. */
+      line-height: 1.6;
+    }
+
+    /* '#btn-gerador' seleciona o nosso botão pelo ID dele.
+    */
+    #btn-gerador {
+      background-color: #00ffff; /* Fundo ciano */
+      color: #0a0a23; /* Texto escuro, para contrastar com o botão */
+      
+      /* 'border: none' remove a borda feia que os navegadores colocam por padrão. */
+      border: none;
+      
+      padding: 12px 24px; /* Espaçamento interno (12px em cima/baixo, 24px dos lados). */
+      font-size: 1rem;
+      font-weight: bold; /* Deixa o texto do botão em negrito. */
+      border-radius: 8px; /* Bordas arredondadas. */
+      
+      /* 'cursor: pointer' faz o mouse virar uma "mãozinha" quando passa em cima. */
+      cursor: pointer;
+      
+      /* 'transition' cria uma animação suave quando o botão muda. 
+         Aqui, ele vai animar a mudança da cor de fundo em 0.3 segundos. */
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    /* '#btn-gerador:hover' é um "pseudo-seletor".
+      Ele aplica estilos APENAS quando o mouse está EM CIMA do botão.
+    */
+    #btn-gerador:hover {
+      /* Deixamos o botão um pouco mais claro quando o mouse está em cima. */
+      background-color: #99ffff;
+      
+      /* 'transform: scale(1.05)' faz o botão aumentar de tamanho levemente (5%). */
+      transform: scale(1.05);
+    }
+    
+    /* 'footer' seleciona a tag <footer> (rodapé) */
+    footer {
+        /* 'margin-top' adiciona um espaço ACIMA do rodapé. */
+        margin-top: 30px; 
+        font-size: 0.9rem; /* Texto um pouco menor. */
+        color: #888; /* Cor cinza, menos importante. */
+    }
+    
+  </style>
+  </head>
+<body>
+
+  <main>
+
+    <h1>🌌 Fatos do Universo</h1>
+
+    <p id="fato-display">
+      Clique no botão abaixo para descobrir um fato curioso sobre o universo!
+    </p>
+
+    <button id="btn-gerador">Gerar Novo Fato!</button>
+
+  </main>
   
-  /* Define uma largura máxima, para não ficar gigante em telas grandes. */
-  max-width: 600px;
-}
+  <footer>
+    <p>Feito com ❤️ por um(a) Aluno(a) Incrível (e um robô assistente)!</p>
+  </footer>
 
-/* &#39;h1&#39; seleciona o nosso título principal. 
-*/
-h1 {
-  /* &#39;font-size&#39; muda o tamanho do texto. &#39;2.5rem&#39; é uma unidade moderna 
-     que significa &quot;2.5 vezes o tamanho da fonte padrão do navegador&quot;. */
-  font-size: 2.5rem;
 
-  /* &#39;color&#39; define a cor do título. Usamos nosso ciano brilhante. */
-  color: #00ffff;
-  
-  /* &#39;text-shadow&#39; adiciona uma sombra ao texto, o que cria um efeito &quot;neon&quot;. */
-  text-shadow: 0 0 8px #00ffff;
-}
+  <script>
+    // Olá! Bem-vindo ao JavaScript.
+    // 'const' é como criamos uma "caixa" para guardar algo. O nome dessa caixa não pode mudar.
+    
+    // 1. Criamos uma "gaveta" (em JS, chamamos de 'Array') para guardar nossos fatos.
+    // Um Array é uma lista de coisas, separadas por vírgula [ ]
+    const fatos = [
+      "Um dia em Vênus é mais longo do que um ano em Vênus.",
+      "O Sol é tão grande que caberiam cerca de 1,3 milhão de planetas Terra dentro dele.",
+      "Existem mais estrelas no universo do que grãos de areia em todas as praias da Terra.",
+      "As pegadas deixadas pelos astronautas na Lua ficarão lá por milhões de anos, pois não há vento ou água.",
+      "Júpiter tem uma tempestade (a Grande Mancha Vermelha) que é maior que o tamanho da Terra e dura séculos.",
+      "Se você pudesse voar de avião até o Sol, a viagem levaria cerca de 19 anos.",
+      "Neutrinos são partículas minúsculas que atravessam seu corpo (e o planeta inteiro) o tempo todo, mas não sentimos nada."
+    ];
 
-/* &#39;#fato-display&#39; seleciona o elemento que tem o ID &quot;fato-display&quot;.
-  IDs (identificadores) são únicos, só um elemento na página pode ter esse nome.
-  Começamos com &#39;#&#39; para selecionar um ID.
-*/
-#fato-display {
-  font-size: 1.2rem;
-  /* &#39;min-height&#39; define uma altura MÍNIMA. 
-     Isso evita que o botão &quot;pule&quot; para cima e para baixo 
-     quando o texto do fato muda de tamanho. */
-  min-height: 80px;
-  
-  /* &#39;line-height&#39; controla o espaçamento entre as linhas do texto. */
-  line-height: 1.6;
-}
+    // 2. Agora, precisamos "pegar" os elementos do HTML que vamos usar.
+    // Usamos 'document.getElementById()' para encontrar uma tag pelo 'id' único que demos a ela.
+    
+    // Pegando o botão e guardando na caixa 'botao'
+    const botao = document.getElementById("btn-gerador");
+    
+    // Pegando o parágrafo e guardando na caixa 'displayFato'
+    const displayFato = document.getElementById("fato-display");
 
-/* &#39;#btn-gerador&#39; seleciona o nosso botão pelo ID dele.
-*/
-#btn-gerador {
-  background-color: #00ffff; /* Fundo ciano */
-  color: #0a0a23; /* Texto escuro, para contrastar com o botão */
-  
-  /* &#39;border: none&#39; remove a borda feia que os navegadores colocam por padrão. */
-  border: none;
-  
-  padding: 12px 24px; /* Espaçamento interno (12px em cima/baixo, 24px dos lados). */
-  font-size: 1rem;
-  font-weight: bold; /* Deixa o texto do botão em negrito. */
-  border-radius: 8px; /* Bordas arredondadas. */
-  
-  /* &#39;cursor: pointer&#39; faz o mouse virar uma &quot;mãozinha&quot; quando passa em cima. */
-  cursor: pointer;
-  
-  /* &#39;transition&#39; cria uma animação suave quando o botão muda. 
-     Aqui, ele vai animar a mudança da cor de fundo em 0.3 segundos. */
-  transition: background-color 0.3s, transform 0.2s;
-}
+    // 3. Agora, criamos a "mágica". 
+    // 'function' é um bloco de instruções que podemos "chamar" quando quisermos.
+    // Demos a esta função o nome de 'gerarNovoFato'.
+    function gerarNovoFato() {
+      // Dentro desta função, vamos:
 
-/* &#39;#btn-gerador:hover&#39; é um &quot;pseudo-seletor&quot;.
-  Ele aplica estilos APENAS quando o mouse está EM CIMA do botão.
-*/
-#btn-gerador:hover {
-  /* Deixamos o botão um pouco mais claro quando o mouse está em cima. */
-  background-color: #99ffff;
-  
-  /* &#39;transform: scale(1.05)&#39; faz o botão aumentar de tamanho levemente (5%). */
-  transform: scale(1.05);
-}
+      // a) Sortear um número aleatório.
+      // 'Math.random()' sorteia um número quebrado entre 0 e 0.99...
+      // 'fatos.length' nos diz quantos fatos temos na nossa lista (no caso, 7).
+      // Multiplicando os dois, temos um número entre 0 e 6.99...
+      // 'Math.floor()' arredonda o número PARA BAIXO, nos dando um número inteiro (0, 1, 2, 3, 4, 5 ou 6).
+      const indiceAleatorio = Math.floor(Math.random() * fatos.length);
 
-/* &#39;footer&#39; seleciona a tag &lt;footer&gt; (rodapé) */
-footer {
-    /* &#39;margin-top&#39; adiciona um espaço ACIMA do rodapé. */
-    margin-top: 30px; 
-    font-size: 0.9rem; /* Texto um pouco menor. */
-    color: #888; /* Cor cinza, menos importante. */
-}
-</style>
+      // b) Usar esse número sorteado para pegar um fato da nossa lista.
+      // 'fatos[indiceAleatorio]' significa: "vá na lista 'fatos' e pegue o item na posição que sorteamos".
+      const novoFato = fatos[indiceAleatorio];
 
-</head> <body>
+      // c) Finalmente, colocar esse novo fato dentro do nosso parágrafo na tela.
+      // '.textContent' é a propriedade que controla o TEXTO dentro de um elemento.
+      displayFato.textContent = novoFato;
+    }
 
-<main>
+    // 4. Por último, dizemos ao botão para "ouvir" (addEventListener) por um "click".
+    // QUANDO ele for clicado, ele deve "chamar" (executar) a nossa função 'gerarNovoFato'.
+    botao.addEventListener("click", gerarNovoFato);
 
-<h1>🌌 Fatos do Universo</h1>
-
-<p id="fato-display">
-  Clique no botão abaixo para descobrir um fato curioso sobre o universo!
-</p>
-
-<button id="btn-gerador">Gerar Novo Fato!</button>
-</main>
-
-<footer> <p>Feito com ❤️ por um(a) Aluno(a) Incrível (e um robô assistente)!</p> </footer>
-
-<script> // Olá! Bem-vindo ao JavaScript. // 'const' é como criamos uma "caixa" para guardar algo. O nome dessa caixa não pode mudar.
-
-// 1. Criamos uma &quot;gaveta&quot; (em JS, chamamos de &#39;Array&#39;) para guardar nossos fatos.
-// Um Array é uma lista de coisas, separadas por vírgula [ ]
-const fatos = [
-  &quot;Um dia em Vênus é mais longo do que um ano em Vênus.&quot;,
-  &quot;O Sol é tão grande que caberiam cerca de 1,3 milhão de planetas Terra dentro dele.&quot;,
-  &quot;Existem mais estrelas no universo do que grãos de areia em todas as praias da Terra.&quot;,
-  &quot;As pegadas deixadas pelos astronautas na Lua ficarão lá por milhões de anos, pois não há vento ou água.&quot;,
-  &quot;Júpiter tem uma tempestade (a Grande Mancha Vermelha) que é maior que o tamanho da Terra e dura séculos.&quot;,
-  &quot;Se você pudesse voar de avião até o Sol, a viagem levaria cerca de 19 anos.&quot;,
-  &quot;Neutrinos são partículas minúsculas que atravessam seu corpo (e o planeta inteiro) o tempo todo, mas não sentimos nada.&quot;
-];
-
-// 2. Agora, precisamos &quot;pegar&quot; os elementos do HTML que vamos usar.
-// Usamos &#39;document.getElementById()&#39; para encontrar uma tag pelo &#39;id&#39; único que demos a ela.
-
-// Pegando o botão e guardando na caixa &#39;botao&#39;
-const botao = document.getElementById(&quot;btn-gerador&quot;);
-
-// Pegando o parágrafo e guardando na caixa &#39;displayFato&#39;
-const displayFato = document.getElementById(&quot;fato-display&quot;);
-
-// 3. Agora, criamos a &quot;mágica&quot;. 
-// &#39;function&#39; é um bloco de instruções que podemos &quot;chamar&quot; quando quisermos.
-// Demos a esta função o nome de &#39;gerarNovoFato&#39;.
-function gerarNovoFato() {
-  // Dentro desta função, vamos:
-
-  // a) Sortear um número aleatório.
-  // &#39;Math.random()&#39; sorteia um número quebrado entre 0 e 0.99...
-  // &#39;fatos.length&#39; nos diz quantos fatos temos na nossa lista (no caso, 7).
-  // Multiplicando os dois, temos um número entre 0 e 6.99...
-  // &#39;Math.floor()&#39; arredonda o número PARA BAIXO, nos dando um número inteiro (0, 1, 2, 3, 4, 5 ou 6).
-  const indiceAleatorio = Math.floor(Math.random() * fatos.length);
-
-  // b) Usar esse número sorteado para pegar um fato da nossa lista.
-  // &#39;fatos[indiceAleatorio]&#39; significa: &quot;vá na lista &#39;fatos&#39; e pegue o item na posição que sorteamos&quot;.
-  const novoFato = fatos[indiceAleatorio];
-
-  // c) Finalmente, colocar esse novo fato dentro do nosso parágrafo na tela.
-  // &#39;.textContent&#39; é a propriedade que controla o TEXTO dentro de um elemento.
-  displayFato.textContent = novoFato;
-}
-
-// 4. Por último, dizemos ao botão para &quot;ouvir&quot; (addEventListener) por um &quot;click&quot;.
-// QUANDO ele for clicado, ele deve &quot;chamar&quot; (executar) a nossa função &#39;gerarNovoFato&#39;.
-botao.addEventListener(&quot;click&quot;, gerarNovoFato);
-</script>
-
+  </script>
+  </body>
+</html>
 </body> </html>
